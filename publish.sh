@@ -17,6 +17,8 @@ git_branch="$2"
 cd _book
 # Initiate git
 git init
+# Commit empty commit
+git commit --allow-empty -m 'Update docs'
 # Checkout given branch
 git checkout -b "$git_branch"
 # Add every change
