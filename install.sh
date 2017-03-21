@@ -11,3 +11,6 @@ if ! command -v gitbook > /dev/null
 then
     npm install -g gitbook-cli
 fi
+
+# Install plugins
+gitbook install
