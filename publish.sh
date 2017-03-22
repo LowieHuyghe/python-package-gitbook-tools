@@ -2,8 +2,8 @@
 
 # Automatic error detection
 set -e
-# Go to current working directory
-cd "$(dirname "$0")/../.."
+# Fetch script directory
+dir="$(dirname "$0")"
 
 
 # Arguments
@@ -11,7 +11,7 @@ git_remote_url="$1"
 git_branch="$2"
 
 # Build
-./bin/gitbook/build.sh
+${dir}/build.sh
 
 # Go into generated folder
 cd _book

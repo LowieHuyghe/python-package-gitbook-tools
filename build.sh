@@ -2,12 +2,12 @@
 
 # Automatic error detection
 set -e
-# Go to current working directory
-cd "$(dirname "$0")/../.."
+# Fetch script directory
+dir="$(dirname "$0")"
 
 
 # Install
-./bin/gitbook/install.sh
+${dir}/install.sh
 
 # Remove existing
 rm -rf ./_book
