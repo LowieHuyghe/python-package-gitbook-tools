@@ -13,8 +13,8 @@ git_branch="$2"
 # Git user
 if [ ! -z "$GH_NAME" ] && [ ! -z "$GH_EMAIL" ]
 then
-	git config user.name "$GH_NAME"
-	git config user.email "$GH_EMAIL"
+	git config --global user.name "$GH_NAME"
+	git config --global user.email "$GH_EMAIL"
 elif [ -z "$( git config --global user.name )" ] || [ -z "$( git config --global user.email )" ]
 then
 	>&2 echo '*** Please tell git who you are.'
