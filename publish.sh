@@ -15,7 +15,7 @@ if [ ! -z "$GH_NAME" ] && [ ! -z "$GH_EMAIL" ]
 then
 	git config --global user.name "$GH_NAME"
 	git config --global user.email "$GH_EMAIL"
-else if [ -z "$( git config --global user.name )" ] || [ -z "$( git config --global user.email )" ]
+elif [ -z "$( git config --global user.name )" ] || [ -z "$( git config --global user.email )" ]
 then
 	>&2 echo '*** Please tell git who you are.'
 	>&2 echo ''
