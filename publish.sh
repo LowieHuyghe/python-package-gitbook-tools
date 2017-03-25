@@ -10,6 +10,13 @@ dir="$(dirname "$0")"
 git_remote_url="$1"
 git_branch="$2"
 
+# Git user
+if [ ! -z "$GH_NAME" ] && [ ! -z "$GH_EMAIL" ]
+then
+	git config --global user.name "$GH_NAME"
+	git config --global user.email "$GH_EMAIL"
+fi
+
 # Build
 ${dir}/build.sh
 
