@@ -26,8 +26,8 @@ then
 	>&2 echo ''
 	>&2 echo 'Or set'
 	>&2 echo ''
-	>&2 echo '  GH_NAME="you@example.com"'
-	>&2 echo '  GH_EMAIL="Your Name"'
+	>&2 echo '  GH_EMAIL="you@example.com"'
+	>&2 echo '  GH_NAME="Your Name"'
 	exit 1
 fi
 
