@@ -15,6 +15,17 @@ if [ ! -z "$GH_NAME" ] && [ ! -z "$GH_EMAIL" ]
 then
 	git config --global user.name "$GH_NAME"
 	git config --global user.email "$GH_EMAIL"
+else if [ -z "$( git config --global user.name )" ] || [ -z "$( git config --global user.email )" ]
+then
+	>&2 echo '*** Please tell git who you are.'
+	>&2 echo ''
+	>&2 echo 'Run'
+	>&2 echo '  git config --global user.email "you@example.com"'
+	>&2 echo '  git config --global user.name "Your Name"'
+	>&2 echo 'Or set'
+	>&2 echo '  GH_NAME="you@example.com"'
+	>&2 echo '  GH_EMAIL="Your Name"'
+	exit 1
 fi
 
 # Build
