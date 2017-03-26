@@ -34,6 +34,16 @@ fi
 # Build
 ${dir}/build.sh
 
+# Copy CI config
+ci_configs=( '.travis.yml' 'circle.yml' )
+for ci_config in ${ci_configs[@]}
+do
+	if [ -f "$ci_config" ]
+	then
+		cp "$ci_config" "_book/$ci_config"
+	fi
+done
+
 # Go into generated folder
 cd _book
 # Initiate git
