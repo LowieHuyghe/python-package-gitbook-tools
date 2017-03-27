@@ -7,10 +7,10 @@ dir="$(dirname "$0")"
 
 
 # Install when necessary
-if ! command -v gitbook > /dev/null
+if [ ! -f "./node_modules/gitbook-cli/bin/gitbook.js" ]
 then
-    npm install -g gitbook-cli
+	npm install gitbook-cli
 fi
 
 # Install plugins
-gitbook install
+./node_modules/gitbook-cli/bin/gitbook.js install
