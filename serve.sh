@@ -10,4 +10,4 @@ dir="$(dirname "$0")"
 ${dir}/install.sh
 
 # Serve
-gitbook serve
+./node_modules/gitbook-cli/bin/gitbook.js serve
