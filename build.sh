@@ -13,4 +13,4 @@ ${dir}/install.sh
 rm -rf ./_book
 
 # Serve
-./node_modules/gitbook-cli/bin/gitbook.js build
+gitbook build
