@@ -1,5 +1,5 @@
 
-# [DEPRECATED] Python Package GitBook Tools
+# Python Package GitBook Tools
 
 Easy tools for using GitBook for Python Packages.
 Especially comes in handy when using CI.
